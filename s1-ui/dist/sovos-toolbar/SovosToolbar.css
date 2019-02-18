@@ -1,0 +1,6 @@
+div > .sovos-toolbar__group {
+    border-left: 0;
+}
+div > .sovos-toolbar__group ~ .sovos-toolbar__group {
+    border-left: 1px solid;
+}

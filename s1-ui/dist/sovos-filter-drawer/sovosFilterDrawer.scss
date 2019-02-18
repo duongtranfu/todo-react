@@ -1,0 +1,34 @@
+$color-light-purple: rgb(111, 109, 188);
+
+.filter-drawer__status {
+  font-weight: bold;
+  font-size: 14px;
+  font-family: 'Roboto-Regular', Arial;
+  margin: 5px 0;
+}
+
+.filter-drawer svg {
+  width: 16px !important;
+  height: 16px !important;
+  padding-top: 3px;
+  fill: $color-light-purple !important;
+}
+
+.filter-drawer label {
+  font-size: 14px;
+  line-height: 23px !important;
+  user-select: none;
+}
+
+.filter-drawer__checkbox {
+  font-size: 14px;
+  color : $color-light-purple;
+}
+
+.filter-drawer__checkbox div {
+  margin: 0 !important;
+}
+
+.filter-drawer__checkbox label {
+  font-family: 'Roboto-Regular', Arial !important;
+}

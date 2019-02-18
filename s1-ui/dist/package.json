@@ -1,0 +1,32 @@
+{
+  "name": "s1-ui",
+  "version": "1.1.7",
+  "description": "S1 UI components in React",
+  "main": "./webpack/s1-ui.production.full.min.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.dev.sovos.local/scm/ptfm/s1-ui.git"
+  },
+  "author": "Sovos Compliance",
+  "contributors": [
+    "Andy Grauch <andy.grauch@sovos.com>",
+    "Gonzalo Mercado <gonzalo.mercado@sovos.com>"
+  ],
+  "license": "UNLICENSED",
+  "homepage": "https://bitbucket.dev.sovos.local/projects/PTFM/repos/s1-ui/browse/readme.md",
+  "dependencies": {
+    "react-dropzone": "4.2.3",
+    "react-text-mask": "^5.1.0",
+    "react-transition-group": "2.2.1",
+    "text-mask-addons": "^3.7.1"
+  },
+  "peerDependencies": {
+    "material-ui": "0.20.0",
+    "prop-types": "15.6.0",
+    "react": "16.2.0",
+    "react-dom": "16.2.0"
+  },
+  "jest-junit": {
+    "output": "./reports/test-results.xml"
+  }
+}

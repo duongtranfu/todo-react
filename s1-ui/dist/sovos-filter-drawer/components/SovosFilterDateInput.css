@@ -1,0 +1,7 @@
+.sovos-filter-date-input input {
+  text-align: left;
+}
+
+.sovos-filter-date-input input::placeholder {
+  font-size: 11px;
+}

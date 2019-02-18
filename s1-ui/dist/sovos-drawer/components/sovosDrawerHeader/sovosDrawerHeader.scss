@@ -1,0 +1,37 @@
+.sovos-drawer-header {
+  padding: 10px 15px;
+  box-shadow: 0 0 1px gray;
+}
+
+.sovos-drawer-header__title-section {
+  margin-bottom: 18px;
+}
+
+.sovos-drawer-header__title-section, .sovos-drawer-header__buttons-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sovos-drawer-header__button {
+  max-width: 90px;
+  margin: 0;
+  padding: 0;
+}
+
+
+.sovos-drawer-header__title-section h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 400;
+  font-family: 'Roboto-Regular', Arial, sans-serif;
+  flex-grow: 1;
+}
+
+.sovos-drawer-header__close {
+  cursor: pointer;
+  width: 30px;
+}
+
+.sovos-drawer-header__close:hover {
+  background-color: #eee;
+}

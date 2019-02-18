@@ -1,0 +1,34 @@
+.sovos-drag-drop {
+  display: flex;
+  width: 640px;
+  height: 335px;
+  margin-left: auto;
+  margin-right: auto;
+  border: dashed 1px #cac8c8;
+  border-radius: 6px !important;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.sovos-drag-drop__description {
+  margin: auto;
+  top: 10%;
+  align-self: center;
+}
+
+.sovos-drag-drop__description--text-highlighted {
+  font-weight: bold;
+  color: #000000;
+  font-size: 23px;
+  padding-bottom: 14px;
+}
+
+.sovos-drag-drop__description__icon {
+  margin: 20px
+}
+
+.sovos-drag-drop--item-center {
+  text-align: center;
+}

@@ -1,0 +1,63 @@
+/*
+
+  1. EM MQ is calculated from font-size on <body>
+      1em = 16px, 60em = 960px
+
+  2. 4 columns in grid of 12 columns
+
+  3. 8 columns in grid of 12 columns,
+      width of 12 column grid 100%
+
+  4. Prevent from overflowing outside the parent container
+*/
+
+/*---------------
+  Sovos Settings
+-----------------*/
+
+.sovos-settings__section {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 25px 20px;
+  position: relative;
+}
+
+.sovos-settings__section:last-child .sovos-settings__divider {
+  display: none;
+}
+
+.sovos-settings__section .sovos-settings__divider {
+  background: transparent;
+  color: transparent;
+  border: .5px solid rgba(0, 0, 0, .05);
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+}
+
+/*--------------------------
+  Sovos Settings Responsive
+---------------------------*/
+
+@media screen and (min-width: 60em) { /* [1.] */
+
+  .sovos-settings__section {
+    flex-direction: row;
+  }
+
+  .sovos-settings__header {
+    box-sizing: inherit;
+    flex: 1 1 33.337%; /* [2.] */
+    margin-right: 10px;
+  }
+
+  .sovos-settings__card {
+    box-sizing: inherit;
+    flex: 1 1 66.663%; /* [3.] */
+    margin-left: 10px;
+    min-width: 0; /* [4.] */
+  }
+}
