@@ -1,4 +1,5 @@
-let nextTodoId = 0
+let nextTodoId = 0;
+let countPeople = 0;
 export const addTodo = text => ({
   type: 'ADD_TODO',
   id: nextTodoId++,
@@ -20,3 +21,14 @@ export const VisibilityFilters = {
   SHOW_COMPLETED: 'SHOW_COMPLETED',
   SHOW_ACTIVE: 'SHOW_ACTIVE'
 }
+
+export const addPerson = name => ({
+  type: 'ADD_PERSON',
+  name,
+  id: countPeople++
+})
+
+export const removePeople = id => ({
+  type: 'REMOVE_PERSON',
+  id
+})

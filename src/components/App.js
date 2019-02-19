@@ -1,10 +1,9 @@
-import React from 'react'
-import Footer from './Footer'
-import AddTodo from '../containers/AddTodo'
-import VisibleTodoList from '../containers/VisibleTodoList';
+import React from 'react';
 import SovosThemeProvider from 's1-ui/sovos-theme-provider';
-
-import SovosDatePicker from 's1-ui/sovos-datepicker';
+import Footer from './Footer';
+import AddTodo from '../containers/AddTodo';
+import VisibleTodoList from '../containers/VisibleTodoList';
+import PeopleContainer from '../containers/peoples.container';
 
 const App = () => (
   <SovosThemeProvider>
@@ -12,6 +11,7 @@ const App = () => (
       <AddTodo />
       <VisibleTodoList />
       <Footer />
+      <PeopleContainer />
     </div>
   </SovosThemeProvider>
 )
