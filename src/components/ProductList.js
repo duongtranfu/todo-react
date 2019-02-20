@@ -3,8 +3,7 @@ import React, { Component } from 'react';
 class ProductList extends Component {
 
     constructor(props) {
-        super(props)
-        this.state = Object.assign({}, props.data);
+        super(props);
     }
 
     componentDidMount() {
@@ -17,10 +16,10 @@ class ProductList extends Component {
                 <h1>Product List</h1>
                 <ul>
                     {
-                        this.state.list.map(v => <li>{v}</li>)
+                        this.props.data.list.map(v => <li>{v}</li>)
                     }
                 </ul><br/>
-                Total: {this.state.count}
+                Total: {this.props.data.count}
             </div>
         );
     }
