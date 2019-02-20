@@ -12,7 +12,7 @@ const ClickWrapper = (WrapperComponent) => {
 
         render() {
             return (
-                <div>
+                <div style={{backgroundColor: '#8cff00'}}>
                     <WrapperComponent {...this.props} title={'hi'} text={'an example of HOC'} onClick={this.onClick} />
                 </div>
             );

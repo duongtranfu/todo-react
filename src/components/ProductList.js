@@ -4,6 +4,7 @@ class ProductList extends Component {
 
     constructor(props) {
         super(props);
+        this.state = {a: 1}
     }
 
     componentDidMount() {
@@ -16,10 +17,10 @@ class ProductList extends Component {
                 <h1>Product List</h1>
                 <ul>
                     {
-                        this.props.data.list.map(v => <li>{v}</li>)
+                        this.props.list && this.props.list.map(v => <li>{v}</li>)
                     }
                 </ul><br/>
-                Total: {this.props.data.count}
+                Total: {this.props.count} <br/>
             </div>
         );
     }
