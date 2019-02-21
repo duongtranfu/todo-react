@@ -15,6 +15,10 @@ import ClassList from './ClassList';
 import ProductList from './ProductList';
 import HocCountList from '../hocs/countList.hocs';
 
+// Refs
+import RefsCustomInput from './RefsCustomInput';
+import RefsAutoFocusTextInput from './RefsAutoFocusTextInput';
+
 const NewHead1 = HocClickWrapper(HocHead1);
 const NewHead2 = HocClickWrapper(HocHead2);
 
@@ -26,7 +30,7 @@ const NewProductList1 = IICountList(ProductList);
 const App = () => (
   <SovosThemeProvider>
     <div>
-      <AddTodo />
+      {/* <AddTodo />
       <VisibleTodoList />
       <Footer />
       <PeopleContainer />
@@ -39,7 +43,8 @@ const App = () => (
       <NewClassList />
       <NewProductList />
       <hr />
-      <NewProductList1 data={{ list: ['Apple', 'Nokia', 'Iphone', 'Samsung'] }} />
+      <NewProductList1 data={{ list: ['Apple', 'Nokia', 'Iphone', 'Samsung'] }} /> */}
+      <RefsAutoFocusTextInput />
     </div>
   </SovosThemeProvider>
 )
