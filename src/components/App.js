@@ -19,6 +19,10 @@ import HocCountList from '../hocs/countList.hocs';
 import RefsCustomInput from './RefsCustomInput';
 import RefsAutoFocusTextInput from './RefsAutoFocusTextInput';
 
+// Demo material UI
+import ShipToAddress from './ShipToAddress';
+import ShipFromAddress from './ShipFromAddress';
+
 const NewHead1 = HocClickWrapper(HocHead1);
 const NewHead2 = HocClickWrapper(HocHead2);
 
@@ -33,8 +37,8 @@ const App = () => (
       {/* <AddTodo />
       <VisibleTodoList />
       <Footer />
-      <PeopleContainer />
-      <h1>Head 1</h1>
+      <PeopleContainer /> */}
+      {/* <h1>Head 1</h1>
       <NewHead1 />
       <h1>Head 2</h1>
       <NewHead2 />
@@ -43,8 +47,10 @@ const App = () => (
       <NewClassList />
       <NewProductList />
       <hr />
-      <NewProductList1 data={{ list: ['Apple', 'Nokia', 'Iphone', 'Samsung'] }} /> */}
-      <RefsAutoFocusTextInput />
+      <NewProductList1 data={{ list: ['Apple', 'Nokia', 'Iphone', 'Samsung'] }} />
+      <RefsAutoFocusTextInput /> */}
+      <ShipToAddress />
+      <ShipFromAddress />
     </div>
   </SovosThemeProvider>
 )
