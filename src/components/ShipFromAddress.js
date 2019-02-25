@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
-import DatePicker from 'material-ui/DatePicker';
 import TextField from 'material-ui/TextField';
 import FlatButton from 'material-ui/FlatButton';
+import Remove from 'material-ui/svg-icons/content/remove';
+import Paper from 'material-ui/Paper';
+
+const stylePaper = {
+    padding: '24px'
+};
 
 class ShipFromAddress extends Component {
     constructor(props) {
@@ -14,21 +19,26 @@ class ShipFromAddress extends Component {
 
     render() {
         return (
-            <div>
-                <DatePicker defaultDate={new Date()} container="inline" />
-                <h3>Ship-to Address</h3>
-                <div style={{ width: '50%' }}>
+            <div style={{ paddingLeft: '24px', paddingRight: '24px' }}>
+                <Paper style={stylePaper} zDepth={1} rounded={false}>
                     <div>
-                        <TextField
-                            style={{ marginRight: '4px' }}
-                            floatingLabelText="Street #"
-                        />
-                        <TextField
-                            floatingLabelText="Street name"
-                        />
-                        <FlatButton label="-" style={{float: 'right'}}/>
+                        <span style={{ color: '#434343', fontWeight: '500' }}>Ship-from Address (optional)</span>
+                        <FlatButton style={{ float: 'right' }} icon={<Remove/>} />
                     </div>
-                </div>
+                    <div style={{ width: '50%' }}>
+
+                        <div>
+                            <TextField
+                                style={{ marginRight: '4px' }}
+                                floatingLabelText="Ship from - Street"
+                            />
+                            <TextField
+                                floatingLabelText="Ship from - State"
+                                fullWidth={true}
+                            />
+                        </div>
+                    </div>
+                </Paper>
             </div>
         );
     }

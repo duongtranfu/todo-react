@@ -5,6 +5,8 @@ import AddTodo from '../containers/AddTodo';
 import VisibleTodoList from '../containers/VisibleTodoList';
 import PeopleContainer from '../containers/peoples.container';
 
+import PeopleCmp from './People';
+
 // hoc
 import HocHead1 from './HocHead1';
 import HocHead2 from './HocHead2';
@@ -22,6 +24,10 @@ import RefsAutoFocusTextInput from './RefsAutoFocusTextInput';
 // Demo material UI
 import ShipToAddress from './ShipToAddress';
 import ShipFromAddress from './ShipFromAddress';
+import DataPointTable from './DataPointTable';
+
+// demo default props
+import DefaultProps from './defaultProps';
 
 const NewHead1 = HocClickWrapper(HocHead1);
 const NewHead2 = HocClickWrapper(HocHead2);
@@ -33,13 +39,13 @@ const NewProductList1 = IICountList(ProductList);
 
 const App = () => (
   <SovosThemeProvider>
-    <div>
+    <div style={{backgroundColor: '#ebeef0'}}>
       {/* <AddTodo />
       <VisibleTodoList />
       <Footer />
       <PeopleContainer /> */}
-      {/* <h1>Head 1</h1>
-      <NewHead1 />
+      {/* <h1>Head 1</h1> */}
+      {/* <NewHead1 />
       <h1>Head 2</h1>
       <NewHead2 />
       <hr></hr>
@@ -51,6 +57,7 @@ const App = () => (
       <RefsAutoFocusTextInput /> */}
       <ShipToAddress />
       <ShipFromAddress />
+      <DataPointTable />
     </div>
   </SovosThemeProvider>
 )
