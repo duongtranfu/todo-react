@@ -22,9 +22,7 @@ import RefsCustomInput from './RefsCustomInput';
 import RefsAutoFocusTextInput from './RefsAutoFocusTextInput';
 
 // Demo material UI
-import ShipToAddress from './ShipToAddress';
-import ShipFromAddress from './ShipFromAddress';
-import DataPointTable from './DataPointTable';
+import TaxCal from './TaxCal';
 
 // demo default props
 import DefaultProps from './defaultProps';
@@ -55,9 +53,7 @@ const App = () => (
       <hr />
       <NewProductList1 data={{ list: ['Apple', 'Nokia', 'Iphone', 'Samsung'] }} />
       <RefsAutoFocusTextInput /> */}
-      <ShipToAddress />
-      <ShipFromAddress />
-      <DataPointTable />
+      <TaxCal />
     </div>
   </SovosThemeProvider>
 )

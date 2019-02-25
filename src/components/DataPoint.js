@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 import TextField from 'material-ui/TextField';
+import {
+    TableRow,
+    TableRowColumn,
+} from 'material-ui/Table';
+import FlatButton from 'material-ui/FlatButton';
+import Close from 'material-ui/svg-icons/navigation/close';
 
 class DataPoint extends Component {
     constructor(props) {
@@ -8,37 +14,40 @@ class DataPoint extends Component {
 
     render() {
         return (
-            <React.Fragment>
-                <td>
+            <TableRow displayBorder={false}>
+                <TableRowColumn>
                     <TextField
                         style={{ marginRight: '4px' }}
                         hintText="Quality"
                     />
-                </td>
-                <td>
+                </TableRowColumn>
+                <TableRowColumn>
                     <TextField
                         style={{ marginRight: '4px' }}
                         hintText="Goods/Service Code"
                     />
-                </td>
-                <td>
+                </TableRowColumn>
+                <TableRowColumn>
                     <TextField
                         style={{ marginRight: '4px' }}
                         hintText="Gross Amount"
                     />
-                </td>
-                <td>
+                </TableRowColumn>
+                <TableRowColumn>
                     <TextField
                         style={{ marginRight: '4px' }}
                         hintText="Discount"
                     />
-                </td>
-                <td>
+                </TableRowColumn>
+                <TableRowColumn>
                     <TextField
                         hintText="Delivery Amount"
                     />
-                </td>
-            </React.Fragment>
+                </TableRowColumn>
+                <TableRowColumn style={{ width: '30px' }}>
+                    <FlatButton style={{ minWidth: '29px !important' }} icon={<Close />} />
+                </TableRowColumn>
+            </TableRow>
         );
     }
 }

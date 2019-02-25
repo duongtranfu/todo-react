@@ -23,19 +23,37 @@ class ShipFromAddress extends Component {
                 <Paper style={stylePaper} zDepth={1} rounded={false}>
                     <div>
                         <span style={{ color: '#434343', fontWeight: '500' }}>Ship-from Address (optional)</span>
-                        <FlatButton style={{ float: 'right' }} icon={<Remove/>} />
+                        <FlatButton onClick={this.props.closeShipOpt} style={{ float: 'right' }} icon={<Remove />} />
                     </div>
-                    <div style={{ width: '50%' }}>
+                    <div style={{ display: 'flex' }}>
+                        <div style={{ width: '50%', marginRight: '12px' }}>
 
-                        <div>
+                            <div>
+                                <TextField
+                                    style={{ marginRight: '4px' }}
+                                    floatingLabelText="Ship from - Street"
+                                />
+                                <TextField
+                                    floatingLabelText="Ship from - State"
+                                    fullWidth={true}
+                                />
+                            </div>
+                        </div>
+                        <div style={{ width: '50%' }}>
                             <TextField
-                                style={{ marginRight: '4px' }}
-                                floatingLabelText="Ship from - Street"
-                            />
-                            <TextField
-                                floatingLabelText="Ship from - State"
                                 fullWidth={true}
+                                floatingLabelText="Ship from - City"
                             />
+                            <div>
+                                <TextField
+                                    style={{ width: '85px', marginRight: '4px' }}
+                                    floatingLabelText="Zip code"
+                                />
+                                <TextField
+                                    style={{ width: '50px' }}
+                                    floatingLabelText="+4 Ext"
+                                />
+                            </div>
                         </div>
                     </div>
                 </Paper>
