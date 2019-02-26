@@ -45,7 +45,7 @@ class DataPoint extends Component {
                     />
                 </TableRowColumn>
                 <TableRowColumn style={{ width: '30px' }}>
-                    <FlatButton style={{ minWidth: '29px !important' }} icon={<Close />} />
+                    <FlatButton onClick={this.props.remove} style={{ minWidth: '29px !important' }} icon={<Close />} />
                 </TableRowColumn>
             </TableRow>
         );
