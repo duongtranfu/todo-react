@@ -31,6 +31,7 @@ class DataPointTable extends Component {
     }
 
     removeLine = (id) => {
+        if (this.state.arrRow.length === 1) return;
         this.setState((state, props) => ({
             arrRow: state.arrRow.filter(v => v.id !== id)
         }));
@@ -40,16 +41,18 @@ class DataPointTable extends Component {
         return (
             <React.Fragment>
                 <Table>
-                    <TableHeader displaySelectAll={false} adjustForCheckbox={false}>
-                        <TableRow displayBorder={false}>
-                            <TableHeaderColumn style={tableHeaderColumnStyle}>Quantity</TableHeaderColumn>
-                            <TableHeaderColumn style={tableHeaderColumnStyle}>Goods/Service Code</TableHeaderColumn>
-                            <TableHeaderColumn style={tableHeaderColumnStyle}>Gross Amount</TableHeaderColumn>
-                            <TableHeaderColumn style={tableHeaderColumnStyle}>Discount</TableHeaderColumn>
-                            <TableHeaderColumn style={tableHeaderColumnStyle}>Delivery Amount</TableHeaderColumn>
-                            <TableHeaderColumn style={{ width: '30px' }}></TableHeaderColumn>
-                        </TableRow>
-                    </TableHeader>
+                    {this.state.arrRow.length !== 1 &&
+                        <TableHeader displaySelectAll={false} adjustForCheckbox={false}>
+                            <TableRow displayBorder={false}>
+                                <TableHeaderColumn style={tableHeaderColumnStyle}>Quantity</TableHeaderColumn>
+                                <TableHeaderColumn style={tableHeaderColumnStyle}>Goods/Service Code</TableHeaderColumn>
+                                <TableHeaderColumn style={tableHeaderColumnStyle}>Gross Amount</TableHeaderColumn>
+                                <TableHeaderColumn style={tableHeaderColumnStyle}>Discount</TableHeaderColumn>
+                                <TableHeaderColumn style={tableHeaderColumnStyle}>Delivery Amount</TableHeaderColumn>
+                                <TableHeaderColumn style={{ width: '30px' }}></TableHeaderColumn>
+                            </TableRow>
+                        </TableHeader>
+                    }
                     <TableBody style={{ border: 'none !important' }} displayRowCheckbox={false}>
                         {
                             this.state.arrRow.map(v => <DataPoint key={v.id} remove={() => this.removeLine(v.id)} />)
