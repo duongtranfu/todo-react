@@ -31,7 +31,13 @@ class DataPointTable extends Component {
 
     addLine = () => {
         this.setState((state, props) => ({
-            arrRow: state.arrRow.push({ id: 123 })
+            arrRow: state.arrRow.concat({ id: state.arrRow.length })
+        }));
+    }
+
+    removeLine = (id) => {
+        this.setState((state, props) => ({
+            arrRow: state.arrRow.filter(v => v.id !== id)
         }));
     }
 
@@ -52,7 +58,7 @@ class DataPointTable extends Component {
                         </TableHeader>
                         <TableBody style={{ border: 'none !important' }} displayRowCheckbox={false}>
                             {
-                                this.state.arrRow.map(v => <DataPoint key={v.id} />)
+                                this.state.arrRow.map(v => <DataPoint key={v.id} remove={() => this.removeLine(v.id)}  />)
                             }
                         </TableBody>
                     </Table>
