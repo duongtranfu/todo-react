@@ -27,6 +27,9 @@ import TaxCal from './TaxCal';
 // demo default props
 import DefaultProps from './defaultProps';
 
+// React form
+import FormikDemo from './FormikDemo';
+
 const NewHead1 = HocClickWrapper(HocHead1);
 const NewHead2 = HocClickWrapper(HocHead2);
 
@@ -37,7 +40,7 @@ const NewProductList1 = IICountList(ProductList);
 
 const App = () => (
   <SovosThemeProvider>
-    <div style={{backgroundColor: '#ebeef0'}}>
+    <div style={{ backgroundColor: '#ebeef0' }}>
       {/* <AddTodo />
       <VisibleTodoList />
       <Footer />
@@ -53,7 +56,11 @@ const App = () => (
       <hr />
       <NewProductList1 data={{ list: ['Apple', 'Nokia', 'Iphone', 'Samsung'] }} />
       <RefsAutoFocusTextInput /> */}
+
+      {/* demo for customer */}
       <TaxCal />
+
+      {/* <FormikDemo /> */}
     </div>
   </SovosThemeProvider>
 )

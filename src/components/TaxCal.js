@@ -30,8 +30,9 @@ class TaxCal extends Component {
                 <div style={{ paddingLeft: '24px', paddingRight: '24px' }}>
                     <Paper style={stylePaper} zDepth={1} rounded={false}>
                         <DataPointTable />
-                        <div style={{textAlign: 'right'}}>
-                            <RaisedButton label="Calculate tax" buttonStyle={{backgroundColor: '#14b9f1'}} primary={true} />
+                        <div style={{ textAlign: 'right' }}>
+                            <RaisedButton label="reset" buttonStyle={{ backgroundColor: '#14b9f1' }} style={{ marginRight: '4px' }} primary={true} />
+                            <RaisedButton label="Calculate tax" buttonStyle={{ backgroundColor: '#14b9f1' }} primary={true} />
                         </div>
                     </Paper>
                 </div>
