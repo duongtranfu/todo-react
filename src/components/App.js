@@ -29,6 +29,9 @@ import DefaultProps from './defaultProps';
 
 // React form
 import FormikDemo from './FormikDemo';
+// import CaculationSetup from './staticPagesSovos/CaculationSetup';
+// import DeliveryInsuranceAmount from './staticPagesSovos/DeliveryInsuranceAmount';
+import LineItemDefault from './staticPagesSovos/LineItemDefault';
 
 const NewHead1 = HocClickWrapper(HocHead1);
 const NewHead2 = HocClickWrapper(HocHead2);
@@ -40,7 +43,7 @@ const NewProductList1 = IICountList(ProductList);
 
 const App = () => (
   <SovosThemeProvider>
-    <div style={{ backgroundColor: '#ebeef0' }}>
+    <div style={{ backgroundColor: '#ebeef0'}}>
       {/* <AddTodo />
       <VisibleTodoList />
       <Footer />
@@ -58,9 +61,11 @@ const App = () => (
       <RefsAutoFocusTextInput /> */}
 
       {/* demo for customer */}
-      <TaxCal />
+      {/* <TaxCal /> */}
 
       {/* <FormikDemo /> */}
+
+      <LineItemDefault />
     </div>
   </SovosThemeProvider>
 )
